@@ -1,0 +1,17 @@
+package ArrayandLinkedList;
+
+public class ArrayLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person fam[]= new Person[5];
+		
+		for(int x=0; x<=fam.length;x--) {
+			fam[x].getName(JOption.showInputDialog("Name:"));
+			//=JOptionPan.showInputDialog("whats your name");
+		}
+		
+		
+	}
+
+}

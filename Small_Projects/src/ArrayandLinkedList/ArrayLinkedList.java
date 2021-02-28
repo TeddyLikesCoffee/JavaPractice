@@ -1,0 +1,23 @@
+package ArrayandLinkedList;
+
+import javax.swing.JOptionPane;
+
+public class ArrayLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person fam[]= new Person[2];
+		
+		for(int x=0; x<=fam.length;x++) {
+			fam[x].setName(JOptionPane.showInputDialog("Name:"));
+			fam[x].setAge(Integer.parseInt(JOptionPane.showInputDialog("Enter your age")));
+			fam[x].setCash(Double.parseDouble(JOptionPane.showInputDialog("Cash in hand")));
+		}
+		
+		for(int x=0; x<=fam.length;x--) {
+			JOptionPane.showMessageDialog(null,"### This is the result ###/n" );
+			JOptionPane.showMessageDialog(null,fam[x].getName()+" "+fam[x].getAge()+" "+fam[x].getCash()+"\n");
+		}
+	}
+
+}
