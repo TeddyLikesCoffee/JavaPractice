@@ -7,7 +7,7 @@ public class DVDCollectionMain {
 	final int MAX_NUM_DVDS=2;
 	Dvd[] dvds= new Dvd[MAX_NUM_DVDS];
 	int counter=0;
-	String dvdResults="\n\n";
+	
 		do {
 			
 			String genre=JOptionPane.showInputDialog("Enter the DVD Genre: ");
@@ -18,11 +18,16 @@ public class DVDCollectionMain {
 			
 		}while(MAX_NUM_DVDS>counter);
 	
-	for(int x=0; x < dvds.length; x++) {
-			int numOfDvds=0;
-			dvdResults=dvdResults.concat(" "+dvds[x].getTitle()+" "+dvds[x].getGenre()+" ");
-    }
-	JOptionPane.showMessageDialog(null,dvdResults);
+
+	JOptionPane.showMessageDialog(null,DVDCollection(dvds));
 	
 	}
+	
+	public static String DVDCollection(Dvd[] dvds) {
+		String dvdResults="\n\n";
+		for(int x=0; x < dvds.length; x++) {
+			dvdResults=dvdResults.concat(" "+dvds[x].getTitle()+"\n"+dvds[x].getGenre()+"\n\n");
+		}
+		return dvdResults;
+		}
 }
